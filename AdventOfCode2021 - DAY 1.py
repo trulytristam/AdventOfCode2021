@@ -4,10 +4,3 @@ for i in range(3,len(a)):
     c = last + a[i] - a[i-3]
     inc = inc+1 if c>last else inc
     last = c
-
-
-
-
-
-
-
