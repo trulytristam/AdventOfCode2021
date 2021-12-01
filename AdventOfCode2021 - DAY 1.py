@@ -16,8 +16,6 @@ for i in range(3,len(a)):
     if(c>last):
         inc+=1
     last = c
-print(a)
-print(inc)
 
 
 
