@@ -1,20 +1,8 @@
-a = []
-word = ""
-for i in range(len(code)):
-    l = code[i]
-    if l.isnumeric():
-        word+=l
-    else:
-        a.append(int(word))
-        word = ""
-
-inc = 0
-d = 0
-last = a[0]+a[1]+a[2]
+a = [int(x) for x in code.split('\n')]
+last, inc = a[0]+a[1]+a[2], 0
 for i in range(3,len(a)):
     c = last + a[i] - a[i-3]
-    if(c>last):
-        inc+=1
+    inc = inc+1 if c>last else inc
     last = c
 
 
